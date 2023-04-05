@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 25px;
+  &__copyright {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #BDBDBD;
+    margin: 0;
+  }
+}

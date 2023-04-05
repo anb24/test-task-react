@@ -1,0 +1,57 @@
+.header {
+  background-color: #0D63F3;
+  max-height: 74px;
+  height: 100%;
+  border-radius: 0px 0px 43px 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    height: 56px;
+    padding-left: 65px;
+    cursor: pointer;
+  }
+  &__link {
+    padding-right: 146px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.66);
+    cursor: pointer;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &__user-box {
+    display: flex;
+    align-items: center;
+  }
+  &__user-img {
+    height: 40px;
+    cursor: pointer;
+  }
+  &__user-email {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0 19px 0 8px;
+  }
+  &__user-exit-btn {
+    height: 24px;
+    width: 24px;
+    background: none;
+    border: none;
+    margin-right: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+

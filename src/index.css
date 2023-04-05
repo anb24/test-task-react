@@ -1,13 +1,339 @@
+@import "./vendor/normalize.css";
+@import "./vendor/fonts/fonts.css";
+.App {
+  background-color: #FFFFFF;
+  max-width: 1920px;
+  width: 100%;
+}
+
+.header {
+  background-color: #0D63F3;
+  max-height: 74px;
+  height: 100%;
+  border-radius: 0px 0px 43px 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  height: 56px;
+  padding-left: 65px;
+  cursor: pointer;
+}
+.header__link {
+  padding-right: 146px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.66);
+  cursor: pointer;
+}
+.header__link:last-child {
+  padding-right: 0;
+}
+.header__user-box {
+  display: flex;
+  align-items: center;
+}
+.header__user-img {
+  height: 40px;
+  cursor: pointer;
+}
+.header__user-email {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0 19px 0 8px;
+}
+.header__user-exit-btn {
+  height: 24px;
+  width: 24px;
+  background: none;
+  border: none;
+  margin-right: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.evt-btn {
+  width: 225px;
+  height: 60px;
+  background-color: #0D63F3;
+  border-radius: 5px;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 25px 0 35px 65px;
+  cursor: pointer;
+}
+
+.tbl {
+  margin: 0 auto;
+}
+.tbl__headers {
+  display: flex;
+  margin: 0 65px 50px;
+  padding: 0;
+}
+.tbl__header {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #93A2B8;
+  list-style-type: none;
+  width: 100%;
+}
+.tbl__header-number {
+  max-width: 49px;
+  margin-right: 10px;
+}
+.tbl__header-title {
+  max-width: 261px;
+  margin-right: 24px;
+}
+.tbl__header-status {
+  max-width: 211px;
+  margin-right: 24px;
+}
+.tbl__header-date {
+  max-width: 204px;
+  margin-right: 24px;
+}
+.tbl__header-lead {
+  max-width: 205px;
+  margin-right: 24px;
+}
+.tbl__header-moder {
+  max-width: 205px;
+  margin-right: 24px;
+}
+.tbl__header-access {
+  max-width: 199px;
+  margin-right: 24px;
+}
+.tbl__header-chat {
+  max-width: 136px;
+  margin-right: 24px;
+}
+.tbl__header-options {
+  max-width: 142px;
+}
+.tbl__header-btn {
+  width: 8px;
+  height: 14px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 10px;
+}
+.tbl__contents {
+  display: flex;
+  margin: 0 65px 42px;
+  padding: 0;
+  position: relative;
+}
+.tbl__contents:before {
+  position: absolute;
+  content: "";
+  bottom: -43px;
+  margin-bottom: 25px;
+  border: 1px solid #D3DDEC;
+  max-width: 1789px;
+  width: 100%;
+}
+.tbl__content {
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  list-style-type: none;
+  width: 100%;
+}
+.tbl__content-number {
+  max-width: 49px;
+  margin-right: 10px;
+}
+.tbl__content-title {
+  max-width: 261px;
+  margin-right: 24px;
+  position: relative;
+  justify-content: space-between;
+}
+.tbl__content-title-btn {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0 16px 0 0;
+}
+.tbl__content-status-btn {
+  width: 145px;
+  height: 45px;
+  background-color: #F5E3DC;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0;
+  border: none;
+}
+.tbl__content-date {
+  max-width: 204px;
+  margin-right: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.tbl__content-lead {
+  max-width: 205px;
+  margin-right: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.tbl__content-moder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.tbl__content-access-btn {
+  width: 104px;
+  height: 45px;
+  background-color: #EAF9E8;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0;
+  border: none;
+}
+.tbl__content-chat-btn {
+  width: 64px;
+  height: 45px;
+  background-color: #EAF9E8;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0;
+  border: none;
+}
+.tbl__content-options-btn {
+  width: 46px;
+  height: 45px;
+  background-color: rgba(147, 162, 184, 0.07);
+  border-radius: 7px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-right: 17px;
+}
+.tbl__content-options-btn:last-child {
+  margin-right: 0;
+}
+.tbl__footers {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 74px 0 73px;
+  padding: 0;
+}
+.tbl__footer-pages {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  cursor: default;
+}
+.tbl__footer-btns {
+  display: flex;
+  border: 1px solid #D3DDEC;
+  border-radius: 9px;
+}
+.tbl__footer-btn {
+  width: 54px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #F6F8FB;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+  margin-bottom: 25px;
+}
+.footer__copyright {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #BDBDBD;
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+/*# sourceMappingURL=index.css.map */
