@@ -18,7 +18,7 @@
 .header__logo {
   height: 56px;
   padding-left: 65px;
-  cursor: pointer;
+  cursor: default;
 }
 .header__link {
   padding-right: 146px;
@@ -29,6 +29,7 @@
   line-height: 160%;
   color: rgba(255, 255, 255, 0.66);
   cursor: pointer;
+  text-decoration: none;
 }
 .header__link:last-child {
   padding-right: 0;
@@ -63,6 +64,10 @@
   cursor: pointer;
 }
 
+.active {
+  color: rgb(25, 255, 255);
+}
+
 .evt-btn {
   width: 225px;
   height: 60px;
@@ -77,6 +82,10 @@
   line-height: 19px;
   margin: 25px 0 35px 65px;
   cursor: pointer;
+}
+.evt-btn_link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .tbl {
@@ -573,6 +582,38 @@
   line-height: 19px;
   color: #BDBDBD;
   margin: 0;
+}
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.popup__content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  transform: scale(0.5);
+  transition: 0.3s all;
+  width: 50vw;
+}
+
+.popup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup__content.active {
+  transform: scale(1);
 }
 
 body {

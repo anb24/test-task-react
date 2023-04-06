@@ -9,7 +9,7 @@
   &__logo {
     height: 56px;
     padding-left: 65px;
-    cursor: pointer;
+    cursor: default;
   }
   &__link {
     padding-right: 146px;
@@ -20,6 +20,7 @@
     line-height: 160%;
     color: rgba(255, 255, 255, 0.66);
     cursor: pointer;
+    text-decoration: none;
     &:last-child {
       padding-right: 0;
     }
@@ -53,5 +54,9 @@
     align-items: center;
     cursor: pointer;
   }
+}
+
+.active {
+  color: rgb(25, 255, 255);
 }
 

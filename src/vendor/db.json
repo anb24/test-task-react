@@ -1,0 +1,124 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link-evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "true",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "false",
+      "chat": "true",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "false",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:00",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
+        "link_youtube": "https://app.inwebsale.com/moderator/#events",
+        "link_stub": "https://app.inwebsale.com/moderator/#events",
+        "link_users": "https://app.inwebsale.com/moderator/#events"
+      }
+    }
+  ]
+}

@@ -13,9 +13,9 @@ function CreatePage() {
                     <h2 className="form__title">Создание мероприятия</h2>
                     <div className="form__container">
                         <div className="form__container-elem">
-                            <label className="form__label" for="heading">Название мероприятия</label>
+                            <label className="form__label" htmlFor="heading">Название мероприятия</label>
                             <input className="form__item form__item_el_heading" id="heading" name="heading" placeholder="Введите название" required/>
-                            <label className="form__label" for="lead-name">Имя ведущего</label>
+                            <label className="form__label" htmlFor="lead-name">Имя ведущего</label>
                             <input className="form__item form__item_el_lead-name" id="lead-name" name="lead-name" placeholder="Введите имя" required/>
                             <label className="form__label" htmlFor="date">Дата и время начала</label>
                             <div className="form__date-box">
@@ -34,7 +34,7 @@ function CreatePage() {
                             <fieldset className="form__access">
                                 <p className="form__access-title">Доступ к мероприятию:</p>
                                 <label className="form__label form__access-password" htmlFor="access-password">
-                                    <input className="form__item form__item_el_access-password" type="radio" name="access" id="access-password" value="access-password" checked/>
+                                    <input className="form__item form__item_el_access-password" type="radio" name="access" id="access-password" value="access-password"/>
                                         <span className="form__label-text">По паролям</span>
                                 </label>
                                 <label className="form__label form__access-password" htmlFor="access-free">
@@ -63,17 +63,17 @@ function CreatePage() {
                             <button className="form__pdf-btn">Загрузить PDF<img className="form__pdf-btn-img" src={DownloadBtn}/></button>
                             <fieldset className="form__adding">
                                 <p className="form__adding-title">Дополнительные обязательные поля при входе:</p>
-                                <label className="form__label form__adding-surname" htmlFor="adding-surname" for="adding-surname">
+                                <label className="form__label form__adding-surname" htmlFor="adding-surname" htmlFor="adding-surname">
                                     <input className="form__item form__item_el_adding" type="checkbox" name="adding" id="adding-surname" value="surname"/>
                                     <span className="form__pseudo-item form__pseudo-item_type_checkbox"></span>
                                     <span className="form__label-text form__label_el_adding-text">Фамилия</span>
                                 </label>
-                                <label className="form__label form__adding-surname" htmlFor="adding-surname" for="adding-city">
+                                <label className="form__label form__adding-surname" htmlFor="adding-surname" htmlFor="adding-city">
                                     <input className="form__item form__item_el_adding" type="checkbox" name="adding" id="adding-city" value="city"/>
                                     <span className="form__pseudo-item form__pseudo-item_type_checkbox"></span>
                                     <span className="form__label-text form__label_el_adding-text">Город</span>
                                 </label>
-                                <label className="form__label form__adding-element" htmlFor="adding-surname" for="adding-email">
+                                <label className="form__label form__adding-element" htmlFor="adding-surname" htmlFor="adding-email">
                                     <input className="form__item form__item_el_adding" type="checkbox" name="adding" id="adding-email" value="email"/>
                                     <span className="form__pseudo-item form__pseudo-item_type_checkbox"></span>
                                     <span className="form__label-text form__label_el_adding-text">Email</span>

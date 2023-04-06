@@ -1,5 +1,10 @@
+import React, {useState} from "react";
+
+import data from "../vendor/db.json";
+
 import Header from "./Header";
 import Footer from "./Footer";
+import Popup from "./Popup";
 
 import ArrowBtn from '../images/arrow_up-down.png';
 import MoreBtn from '../images/Plus.png';
@@ -8,13 +13,30 @@ import DeleteBtn from '../images/delete.png';
 import LeftBtn from '../images/arrow_left.png';
 import RightBtn from '../images/arrow_right.png';
 
+
+
+class Main extends React.Component {
+    state = {
+        events: data,
+    }
+    componentDidMount() {
+        console.log(this.state)
+    }
+}
+let dd = new Main(data);
+console.log(dd.componentDidMount())
+
+
+
 function EventsPage() {
+    const [popupDeleteActive, setPopupDeleteActive] = useState(false);
+    const [popupOptionsActive, setPopupOptionsActive] = useState(false);
 
     return (
         <div>
             <Header/>
             <main className="content">
-                <button className="evt-btn">Создать мероприятие</button>
+                <button className="evt-btn"><a className="evt-btn_link" href="/create">Создать мероприятие</a></button>
                 <div className="tbl">
                     <ul className="tbl__headers">
                         <li className="tbl__header tbl__header-number">№</li>
@@ -36,7 +58,7 @@ function EventsPage() {
                         <li className="tbl__content tbl__content-moder">Попов Александр</li>
                         <li className="tbl__content tbl__content-access"><button className="tbl__content-access-btn">открытый</button></li>
                         <li className="tbl__content tbl__content-chat"><button className="tbl__content-chat-btn">вкл</button></li>
-                        <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn"><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn"><img src={DeleteBtn} alt="Удалить"/></button></li>
+                        <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={() => setPopupDeleteActive(true)}><img src={DeleteBtn} alt="Удалить"/></button></li>
                     </ul>
 
 
@@ -100,6 +122,12 @@ function EventsPage() {
                 {/*</table>*/}
             </main>
             <Footer/>
+            <Popup active={popupOptionsActive} setActive={setPopupOptionsActive}>
+                <p>HoLLa !!! HoLLa !!! HoLLa !!!</p>
+            </Popup>
+            <Popup active={popupDeleteActive} setActive={setPopupDeleteActive}>
+                <p>HoLLa !!!</p>
+            </Popup>
         </div>
     )
 }
