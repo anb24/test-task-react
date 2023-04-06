@@ -161,6 +161,7 @@ $width-max: 100%;
     line-height: 19px;
     padding: 0;
     border: none;
+    margin-left: 40px;
   }
 
   &__content-date {
@@ -184,6 +185,8 @@ $width-max: 100%;
   }
 
   &__content-moder {
+    max-width: 205px;
+    margin-right: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
