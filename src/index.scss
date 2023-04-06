@@ -1,22 +1,8 @@
 @import "./vendor/normalize.css",
-"./vendor/fonts/fonts.css",
+"vendor/fonts/fonts.css",
 "./blocks/App",
 "./blocks/Header",
 "./blocks/EventsPage",
 "./blocks/CreatePage",
 "./blocks/Footer",
 "./blocks/Popup";
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

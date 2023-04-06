@@ -232,7 +232,7 @@ $width-max: 100%;
     height: 45px;
     background-color: #EAF9E8;
     border-radius: 5px;
-    font-family: 'Inter';
+    font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -258,6 +258,7 @@ $width-max: 100%;
     align-items: center;
     border: none;
     margin-right: 17px;
+    cursor: pointer;
   }
 
   &__content-options-btn:last-child {
@@ -302,5 +303,122 @@ $width-max: 100%;
     background-color: #F6F8FB;;
     border: none;
     cursor: pointer;
+  }
+}
+
+// POPUP DELETE **********************************************************************
+
+.popup__delete {
+  width: 547px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  display: grid;
+
+  &_text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    margin: 23px auto 49px;
+  }
+
+  &_yes-btn {
+    align-items: center;
+    width: 309px;
+    height: 60px;
+    background: #0D63F3;
+    border-radius: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    justify-self: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #FFFFFF;
+      color: #0D63F3;
+      box-shadow: inset 0 0 0 2px #0D63F3;
+      transition: 1.5s;
+    }
+  }
+
+  &_no-btn {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E16D65;
+    border: none;
+    background: none;
+    margin: 20.5px auto 50.5px;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      font-size: 19px;
+      color: #0D63F3;
+      transition: 1s;
+    }
+  }
+}
+
+// POPUP OPTIONS **********************************************************************
+
+.popup__options {
+  width: 429px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  display: grid;
+  position: relative;
+  &_exit-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 15px;
+    margin: 33px 38px 33px 30px;
+  }
+  &_group-btn {
+    width: 173px;
+    height: 38px;
+    background: rgba(147, 162, 184, 0.1); //сделал темнее на 0.03
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #93A2B8;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+    &-img {
+      margin-right: 12px;
+    }
+    &:hover {
+      background: rgba(147, 162, 184, 0.4);
+      transition: .3s;
+    }
   }
 }

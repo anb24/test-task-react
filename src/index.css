@@ -1,5 +1,5 @@
 @import "./vendor/normalize.css";
-@import "./vendor/fonts/fonts.css";
+@import "vendor/fonts/fonts.css";
 .App {
   background-color: #FFFFFF;
   max-width: 1920px;
@@ -274,7 +274,7 @@
   height: 45px;
   background-color: #EAF9E8;
   border-radius: 5px;
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -299,6 +299,7 @@
   align-items: center;
   border: none;
   margin-right: 17px;
+  cursor: pointer;
 }
 .tbl__content-options-btn:last-child {
   margin-right: 0;
@@ -336,6 +337,116 @@
   background-color: #F6F8FB;
   border: none;
   cursor: pointer;
+}
+
+.popup__delete {
+  width: 547px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  display: grid;
+}
+.popup__delete_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  margin: 23px auto 49px;
+}
+.popup__delete_yes-btn {
+  align-items: center;
+  width: 309px;
+  height: 60px;
+  background: #0D63F3;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border: none;
+  justify-self: center;
+  cursor: pointer;
+}
+.popup__delete_yes-btn:hover {
+  background-color: #FFFFFF;
+  color: #0D63F3;
+  box-shadow: inset 0 0 0 2px #0D63F3;
+  transition: 1.5s;
+}
+.popup__delete_no-btn {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #E16D65;
+  border: none;
+  background: none;
+  margin: 20.5px auto 50.5px;
+  padding: 0;
+  cursor: pointer;
+}
+.popup__delete_no-btn:hover {
+  font-size: 19px;
+  color: #0D63F3;
+  transition: 1s;
+}
+
+.popup__options {
+  width: 429px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  display: grid;
+  position: relative;
+}
+.popup__options_exit-btn {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.popup__options-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 15px;
+  margin: 33px 38px 33px 30px;
+}
+.popup__options_group-btn {
+  width: 173px;
+  height: 38px;
+  background: rgba(147, 162, 184, 0.1);
+  border-radius: 5px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #93A2B8;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+}
+.popup__options_group-btn-img {
+  margin-right: 12px;
+}
+.popup__options_group-btn:hover {
+  background: rgba(147, 162, 184, 0.4);
+  transition: 0.3s;
 }
 
 .form {
@@ -616,12 +727,10 @@
   transition: 0.3s;
 }
 .popup__content {
-  padding: 20px;
   border-radius: 12px;
   background-color: white;
   transform: scale(0.5);
   transition: 0.3s all;
-  width: 50vw;
 }
 
 .popup.active {
@@ -631,17 +740,6 @@
 
 .popup__content.active {
   transform: scale(1);
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /*# sourceMappingURL=index.css.map */

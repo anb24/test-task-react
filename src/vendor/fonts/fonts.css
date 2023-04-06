@@ -2,15 +2,15 @@
     font-family: 'Poppins';
     font-style:  normal;
     font-weight: 400;
-    src: url("Poppins-Regular.woff2") format("woff2"),
-    url("Poppins-Regular.woff") format("woff");
+    src: url("/src/vendor/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("/src/vendor/fonts/Poppins-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: 'Poppins';
     font-display: swap;
-    src: url('Poppins-Medium.woff2') format('woff2'),
-    url('Poppins-Medium.woff') format('woff');
+    src: url('/src/vendor/fonts/Poppins-Medium.woff2') format('woff2'),
+    url('/src/vendor/fonts/Poppins-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
     font-family: 'Poppins';
     font-style:  normal;
     font-weight: 900;
-    src: url("Poppins-Black.woff2") format("woff2"),
-    url("Poppins-Black.woff") format("woff");
+    src: url("/src/vendor/fonts/Poppins-Black.woff2") format("woff2"),
+    url("/src/vendor/fonts/Poppins-Black.woff") format("woff");
 }
 
 @font-face {
@@ -28,8 +28,8 @@
     font-style:  normal;
     font-weight: 400;
     font-display: swap;
-    src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
-    url("Inter-Regular.woff?v=3.19") format("woff");
+    src: url("/src/vendor/fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+    url("/src/vendor/fonts/Inter-Regular.woff?v=3.19") format("woff");
 }
 
 @font-face {
@@ -37,8 +37,8 @@
     font-style:  normal;
     font-weight: 500;
     font-display: swap;
-    src: url("Inter-Medium.woff2?v=3.19") format("woff2"),
-    url("Inter-Medium.woff?v=3.19") format("woff");
+    src: url('/src/vendor/fonts/Inter-Medium.woff2?v=3.19') format('woff2'),
+    url("/src/vendor/fonts/Inter-Medium.woff?v=3.19") format("woff");
 }
 
 @font-face {
@@ -46,6 +46,6 @@
     font-style:  normal;
     font-weight: 900;
     font-display: swap;
-    src: url("Inter-Black.woff2?v=3.19") format("woff2"),
-    url("Inter-Black.woff?v=3.19") format("woff");
+    src: url("/src/vendor/fonts/Inter-Black.woff2?v=3.19") format("woff2"),
+    url("/src/vendor/fonts/Inter-Black.woff?v=3.19") format("woff");
 }
