@@ -9,7 +9,7 @@
       "access": "true",
       "chat": "false",
       "more": {
-        "link-evt": "https://app.inwebsale.com/moderator/#events",
+        "link_evt": "https://app.inwebsale.com/moderator/#events",
         "link_youtube": "https://app.inwebsale.com/moderator/#events",
         "link_stub": "https://app.inwebsale.com/moderator/#events",
         "link_users": "https://app.inwebsale.com/moderator/#events"

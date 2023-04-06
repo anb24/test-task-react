@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 import data from "../vendor/db.json";
+import api from "../utils/api"
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -12,6 +14,7 @@ import OptionsBtn from '../images/options.png';
 import DeleteBtn from '../images/delete.png';
 import LeftBtn from '../images/arrow_left.png';
 import RightBtn from '../images/arrow_right.png';
+import * as events from "events";
 
 
 
@@ -31,12 +34,37 @@ console.log(dd.componentDidMount())
 function EventsPage() {
     const [popupDeleteActive, setPopupDeleteActive] = useState(false);
     const [popupOptionsActive, setPopupOptionsActive] = useState(false);
+    const [events, setEvents] = useState([]);
+    const [eventId, setEventId] = useState(null);
+
+    useEffect(() => {
+        api
+            .getEvents()
+            .then((events) => {
+                setEvents(events)
+            })
+            .catch((err) => {
+                console.log("ОШИБКА загрузки данных: " + err);
+            })
+    })
+
+    function handleEventDelete(event) {
+        api
+            .deleteEvent(eventId)
+            .then(() => {
+                setEvents((state) => state.filter((evt) => evt.id !== eventId));
+                setPopupDeleteActive(false);
+            })
+            .catch((err) => {
+                console.log("ОШИБКА удаления: " + err);
+            })
+    }
 
     return (
         <div>
             <Header/>
             <main className="content">
-                <button className="evt-btn"><a className="evt-btn_link" href="/create">Создать мероприятие</a></button>
+                <div className="evt-btn"><Link className="evt-btn_link" to="/create">Создать мероприятие</Link></div>
                 <div className="tbl">
                     <ul className="tbl__headers">
                         <li className="tbl__header tbl__header-number">№</li>
@@ -50,18 +78,33 @@ function EventsPage() {
                         <li className="tbl__header tbl__header-options">Опции<button className="tbl__header-btn"><img src={ArrowBtn} alt="Сортировка"/></button></li>
                     </ul>
                     <ul className="tbl__contents">
-                        <li className="tbl__content tbl__content-number">1</li>
+                        <li className="tbl__content tbl__content-number">0</li>
                         <li className="tbl__content tbl__content-title">Тест Vimeo<button className="tbl__content-title-btn"><img src={MoreBtn} alt="Подробнее"/></button></li>
                         <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
                         <li className="tbl__content tbl__content-date">14.11.2023, 23:00</li>
-                        <li className="tbl__content tbl__content-lead">Иван</li>
+                        <li className="tbl__content tbl__content-lead">Попов Александр</li>
                         <li className="tbl__content tbl__content-moder">Попов Александр</li>
                         <li className="tbl__content tbl__content-access"><button className="tbl__content-access-btn">открытый</button></li>
                         <li className="tbl__content tbl__content-chat"><button className="tbl__content-chat-btn">вкл</button></li>
                         <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={() => setPopupDeleteActive(true)}><img src={DeleteBtn} alt="Удалить"/></button></li>
                     </ul>
-
-
+                    <div className="box">
+                        {events.map((event) => {
+                            return (
+                                <event className="tbl__contents">
+                                    <li className="tbl__content tbl__content-number">{event.id}</li>
+                                    <li className="tbl__content tbl__content-title">{event.name}<button className="tbl__content-title-btn"><img src={MoreBtn} alt="Подробнее"/></button></li>
+                                    <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
+                                    <li className="tbl__content tbl__content-date">{event.date}, {event.time}</li>
+                                    <li className="tbl__content tbl__content-lead">{event.lead}</li>
+                                    <li className="tbl__content tbl__content-moder">Попов Александр</li>
+                                    <li className="tbl__content tbl__content-access"><button className="tbl__content-access-btn">{event.access}</button></li>
+                                    <li className="tbl__content tbl__content-chat"><button className="tbl__content-chat-btn">{event.chat}</button></li>
+                                    <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={() => setPopupDeleteActive(true)}><img src={DeleteBtn} alt="Удалить"/></button></li>
+                                </event>
+                            )
+                        })}
+                    </div>
 
                     <ul className="tbl__footers">
                         <li className="tbl__footer-pages">Показано 1-8 из 72 результатов</li>
@@ -76,8 +119,6 @@ function EventsPage() {
                         </li>
                     </ul>
                 </div>
-
-
 
                 {/*<table className="tbl">*/}
                 {/*    <thead>*/}
@@ -120,6 +161,7 @@ function EventsPage() {
                 {/*    </tr>*/}
                 {/*    </tfoot>*/}
                 {/*</table>*/}
+
             </main>
             <Footer/>
             <Popup active={popupOptionsActive} setActive={setPopupOptionsActive}>

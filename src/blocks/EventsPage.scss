@@ -15,8 +15,13 @@ $width-max: 100%;
   margin: 25px 0 35px 65px;
   cursor: pointer;
   &_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration:none;
     color: inherit;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -128,6 +133,15 @@ $width-max: 100%;
     color: #000000;
     list-style-type: none;
     width: $width-max;
+    &-status {
+      justify-content: center;
+    }
+    &-chat {
+      justify-content: end;
+    }
+    &-options {
+      justify-content: center;
+    }
   }
 
   &__content-number {
@@ -165,37 +179,38 @@ $width-max: 100%;
     line-height: 19px;
     padding: 0;
     border: none;
-    margin-left: 40px;
+    margin-left: -15px;
   }
 
   &__content-date {
     max-width: 204px;
-    margin-right: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    justify-content: center;
+    margin-left: 10px;
   }
 
   &__content-lead {
     max-width: 205px;
-    margin-right: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    justify-content: end;
   }
 
   &__content-moder {
     max-width: 205px;
-    margin-right: 24px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    justify-content: end;
   }
   &__content-access-btn {
     width: 104px;
@@ -209,6 +224,7 @@ $width-max: 100%;
     line-height: 19px;
     padding: 0;
     border: none;
+    margin-left: 110px;
   }
 
   &__content-chat-btn {
@@ -223,6 +239,7 @@ $width-max: 100%;
     line-height: 19px;
     padding: 0;
     border: none;
+    margin-right: 24px;
   }
 
   &__content-options-btn {

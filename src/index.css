@@ -84,8 +84,13 @@
   cursor: pointer;
 }
 .evt-btn_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  width: 100%;
 }
 
 .tbl {
@@ -179,6 +184,15 @@
   list-style-type: none;
   width: 100%;
 }
+.tbl__content-status {
+  justify-content: center;
+}
+.tbl__content-chat {
+  justify-content: end;
+}
+.tbl__content-options {
+  justify-content: center;
+}
 .tbl__content-number {
   max-width: 49px;
   margin-right: 10px;
@@ -211,34 +225,35 @@
   line-height: 19px;
   padding: 0;
   border: none;
-  margin-left: 40px;
+  margin-left: -15px;
 }
 .tbl__content-date {
   max-width: 204px;
-  margin-right: 24px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  justify-content: center;
+  margin-left: 10px;
 }
 .tbl__content-lead {
   max-width: 205px;
-  margin-right: 24px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  justify-content: end;
 }
 .tbl__content-moder {
   max-width: 205px;
-  margin-right: 24px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  justify-content: end;
 }
 .tbl__content-access-btn {
   width: 104px;
@@ -252,6 +267,7 @@
   line-height: 19px;
   padding: 0;
   border: none;
+  margin-left: 110px;
 }
 .tbl__content-chat-btn {
   width: 64px;
@@ -265,6 +281,7 @@
   line-height: 19px;
   padding: 0;
   border: none;
+  margin-right: 24px;
 }
 .tbl__content-options-btn {
   width: 46px;
@@ -587,7 +604,7 @@
 .popup {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
