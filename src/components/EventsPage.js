@@ -50,6 +50,11 @@ function EventsPage() {
         setEventId(event.id);
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        handleEventDelete();
+    }
+
     function handleEventDelete(event) {
         api
             .deleteEvent(eventId)
@@ -185,7 +190,7 @@ function EventsPage() {
             <Popup active={popupDeleteActive} setActive={setPopupDeleteActive}>
                 <div className="popup__delete">
                     <p className="popup__delete_text">Вы действительно хотите удалить мероприятие?</p>
-                    <button className="popup__delete_yes-btn">Да</button>
+                    <button className="popup__delete_yes-btn" onClick={handleSubmit}>Да</button>
                     <button className="popup__delete_no-btn" onClick={closeAllPopups}>Отмена</button>
                 </div>
             </Popup>
