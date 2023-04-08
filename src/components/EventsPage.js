@@ -68,11 +68,27 @@ function EventsPage() {
             })
     }
 
-    function MoreBtnClick(event, index) {
+    function moreBtnClick(event, index) {
         if(event.isActive === false) {
             setEvents(events.map((v, idx) => index === idx ? {...v, isActive: true} : v));
         } else {
             setEvents(events.map((v, idx) => index === idx ? {...v, isActive: false} : v));
+        }
+    }
+
+    function chatBtnClick(event, index) {
+        if(event.chat === false) {
+            setEvents(events.map((v, idx) => index === idx ? {...v, chat: true} : v));
+        } else {
+            setEvents(events.map((v, idx) => index === idx ? {...v, chat: false} : v));
+        }
+    }
+
+    function accessBtnClick(event, index) {
+        if(event.access === false) {
+            setEvents(events.map((v, idx) => index === idx ? {...v, access: true} : v));
+        } else {
+            setEvents(events.map((v, idx) => index === idx ? {...v, access: false} : v));
         }
     }
 
@@ -97,7 +113,7 @@ function EventsPage() {
                     {/*Тестовый блок*/}
                     <ul className="tbl__contents">
                         <li className="tbl__content tbl__content-number">0</li>
-                        <li className="tbl__content tbl__content-title">Тест Vimeo<button className="tbl__content-title-btn" onClick={MoreBtnClick}><img src={MoreBtn} alt="Подробнее"/></button></li>
+                        <li className="tbl__content tbl__content-title">Тест Vimeo<button className="tbl__content-title-btn"><img src={MoreBtn} alt="Подробнее"/></button></li>
                         <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
                         <li className="tbl__content tbl__content-date">14.11.2023, 23:00</li>
                         <li className="tbl__content tbl__content-lead">Попов Александр</li>
@@ -119,16 +135,16 @@ function EventsPage() {
                                 <div key={event.id}>
                                     <ul className="tbl__contents">
                                         <li className="tbl__content tbl__content-number">{event.id}</li>
-                                        <li className="tbl__content tbl__content-title">{event.name}<button className="tbl__content-title-btn" onClick={() => MoreBtnClick(event, i)}><img src={MoreBtn} alt="Подробнее"/></button></li>
+                                        <li className="tbl__content tbl__content-title">{event.name}<button className="tbl__content-title-btn" onClick={() => moreBtnClick(event, i)}><img src={MoreBtn} alt="Подробнее"/></button></li>
                                         <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
                                         <li className="tbl__content tbl__content-date">{event.date}, {event.time}</li>
                                         <li className="tbl__content tbl__content-lead">{event.lead}</li>
                                         <li className="tbl__content tbl__content-moder">Попов Александр</li>
-                                        <li className="tbl__content tbl__content-access"><button className="tbl__content-access-btn">{event.access}</button></li>
-                                        <li className="tbl__content tbl__content-chat"><button className="tbl__content-chat-btn">{event.chat}</button></li>
+                                        <li className="tbl__content tbl__content-access"><button className={event.access ? "tbl__content-access-btn tbl__content-access-btn_active" : "tbl__content-access-btn"} onClick={() => accessBtnClick(event, i)}>{event.access ? "открытый" : "закрытый"}</button></li>
+                                        <li className="tbl__content tbl__content-chat"><button className={event.chat ? "tbl__content-chat-btn" : "tbl__content-chat-btn tbl__content-chat-btn_active"} onClick={() => chatBtnClick(event, i)}>{event.chat ? "выкл" : "вкл"}</button></li>
                                         <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={handleDeleteEventClick}><img src={DeleteBtn} alt="Удалить"/></button></li>
                                     </ul>
-                                    <ul className={event.isActive? "tbl__content-details" : "tbl__content-details tbl__content-details_active" }>
+                                    <ul className={event.isActive ? "tbl__content-details" : "tbl__content-details tbl__content-details_active" }>
                                         <li className="tbl__content-details_elem">Ссылка на мероприятие: <a className="tbl__content-details_elem-link" href="#">https://app.inwebsale.com/moderator/#events</a></li>
                                         <li className="tbl__content-details_elem">YouTube трансляция: <a className="tbl__content-details_elem-link" href="#">{event.more.link_youtube}</a></li>
                                         <li className="tbl__content-details_elem">Заглушка: <a className="tbl__content-details_elem-link" href="#">{event.more.link_stub}</a></li>

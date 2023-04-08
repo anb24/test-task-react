@@ -23,7 +23,7 @@
       "time": "23:01",
       "lead": "Попов Александр",
       "access": "true",
-      "chat": "true",
+      "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_1",
         "link_youtube": "https://app.inwebsale.com/youtube/#events_1",
@@ -38,8 +38,8 @@
       "date": "14.11.2020",
       "time": "23:02",
       "lead": "Попов Александр",
-      "access": "false",
-      "chat": "true",
+      "access": "true",
+      "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_2",
         "link_youtube": "https://app.inwebsale.com/youtube/#events_2",
@@ -54,7 +54,7 @@
       "date": "14.11.2020",
       "time": "23:03",
       "lead": "Попов Александр",
-      "access": "false",
+      "access": "true",
       "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_3",
@@ -71,7 +71,7 @@
       "time": "23:04",
       "lead": "Попов Александр",
       "access": "true",
-      "chat": "true",
+      "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_4",
         "link_youtube": "https://app.inwebsale.com/youtube/#events_4",
@@ -86,8 +86,8 @@
       "date": "14.11.2020",
       "time": "23:05",
       "lead": "Попов Александр",
-      "access": "false",
-      "chat": "true",
+      "access": "true",
+      "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_5",
         "link_youtube": "https://app.inwebsale.com/youtube/#events_5",
@@ -102,7 +102,7 @@
       "date": "14.11.2020",
       "time": "23:06",
       "lead": "Попов Александр",
-      "access": "false",
+      "access": "true",
       "chat": "false",
       "more": {
         "link_evt": "https://app.inwebsale.com/evt/#events_6",

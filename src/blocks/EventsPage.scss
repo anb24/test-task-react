@@ -180,6 +180,10 @@ $width-max: 100%;
     padding: 0;
     border: none;
     margin-left: -15px;
+    cursor: pointer;
+    &_active{
+      background-color: #EAF9E8;
+    }
   }
 
   &__content-date {
@@ -215,7 +219,7 @@ $width-max: 100%;
   &__content-access-btn {
     width: 104px;
     height: 45px;
-    background-color: #EAF9E8;
+    background-color: #F5E3DC;
     border-radius: 5px;
     font-family: 'Inter';
     font-style: normal;
@@ -225,12 +229,16 @@ $width-max: 100%;
     padding: 0;
     border: none;
     margin-left: 110px;
+    cursor: pointer;
+    &_active{
+      background-color: #EAF9E8;
+    }
   }
 
   &__content-chat-btn {
     width: 64px;
     height: 45px;
-    background-color: #EAF9E8;
+    background-color: #F5E3DC;
     border-radius: 5px;
     font-family: Inter;
     font-style: normal;
@@ -240,6 +248,10 @@ $width-max: 100%;
     padding: 0;
     border: none;
     margin-right: 24px;
+    cursor: pointer;
+    &_active{
+      background-color: #EAF9E8;
+    }
   }
 
   &__content-options-btn {
