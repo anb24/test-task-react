@@ -9,116 +9,268 @@
       "access": "true",
       "chat": "false",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_0",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_0",
+        "link_stub": "https://app.inwebsale.com/stub/#events_0",
+        "link_users": "https://app.inwebsale.com/users/#events_0"
+      },
+      "isActive": "false"
     },
     {
       "id": "2",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:01",
       "lead": "Попов Александр",
       "access": "true",
       "chat": "true",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_1",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_1",
+        "link_stub": "https://app.inwebsale.com/stub/#events_1",
+        "link_users": "https://app.inwebsale.com/users/#events_1"
+      },
+      "isActive": "false"
     },
     {
       "id": "3",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:02",
       "lead": "Попов Александр",
       "access": "false",
       "chat": "true",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_2",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_2",
+        "link_stub": "https://app.inwebsale.com/stub/#events_2",
+        "link_users": "https://app.inwebsale.com/users/#events_2"
+      },
+      "isActive": "false"
     },
     {
       "id": "4",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:03",
       "lead": "Попов Александр",
       "access": "false",
       "chat": "false",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_3",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_3",
+        "link_stub": "https://app.inwebsale.com/stub/#events_3",
+        "link_users": "https://app.inwebsale.com/users/#events_3"
+      },
+      "isActive": "false"
     },
     {
       "id": "5",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:04",
       "lead": "Попов Александр",
       "access": "true",
-      "chat": "false",
+      "chat": "true",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_4",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_4",
+        "link_stub": "https://app.inwebsale.com/stub/#events_4",
+        "link_users": "https://app.inwebsale.com/users/#events_4"
+      },
+      "isActive": "false"
     },
     {
       "id": "6",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:05",
       "lead": "Попов Александр",
-      "access": "true",
-      "chat": "false",
+      "access": "false",
+      "chat": "true",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_5",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_5",
+        "link_stub": "https://app.inwebsale.com/stub/#events_5",
+        "link_users": "https://app.inwebsale.com/users/#events_5"
+      },
+      "isActive": "false"
     },
     {
       "id": "7",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:06",
       "lead": "Попов Александр",
-      "access": "true",
+      "access": "false",
       "chat": "false",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_6",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_6",
+        "link_stub": "https://app.inwebsale.com/stub/#events_6",
+        "link_users": "https://app.inwebsale.com/users/#events_6"
+      },
+      "isActive": "false"
     },
     {
       "id": "8",
       "name": "Благотворительный эфир Шани Джанти",
       "date": "14.11.2020",
-      "time": "23:00",
+      "time": "23:07",
       "lead": "Попов Александр",
       "access": "true",
       "chat": "false",
       "more": {
-        "link_evt": "https://app.inwebsale.com/moderator/#events",
-        "link_youtube": "https://app.inwebsale.com/moderator/#events",
-        "link_stub": "https://app.inwebsale.com/moderator/#events",
-        "link_users": "https://app.inwebsale.com/moderator/#events"
-      }
+        "link_evt": "https://app.inwebsale.com/evt/#events_7",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events_7",
+        "link_stub": "https://app.inwebsale.com/stub/#events_7",
+        "link_users": "https://app.inwebsale.com/users/#events_7"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "9",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:08",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "10",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:09",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "11",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:10",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "12",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:11",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "13",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:12",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "14",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:13",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "15",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:14",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "16",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:15",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
+    },
+    {
+      "id": "17",
+      "name": "Благотворительный эфир Шани Джанти",
+      "date": "14.11.2020",
+      "time": "23:16",
+      "lead": "Попов Александр",
+      "access": "true",
+      "chat": "false",
+      "more": {
+        "link_evt": "https://app.inwebsale.com/evt/#events",
+        "link_youtube": "https://app.inwebsale.com/youtube/#events",
+        "link_stub": "https://app.inwebsale.com/stub/#events",
+        "link_users": "https://app.inwebsale.com/users/#events"
+      },
+      "isActive": "false"
     }
   ]
 }

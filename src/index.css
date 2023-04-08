@@ -304,6 +304,36 @@
 .tbl__content-options-btn:last-child {
   margin-right: 0;
 }
+.tbl__content-details {
+  display: none;
+  list-style-type: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin: 25px 0 41px;
+  padding-left: 125px;
+}
+.tbl__content-details_elem {
+  padding-bottom: 20px;
+}
+.tbl__content-details_elem:last-child {
+  padding-bottom: 0;
+}
+.tbl__content-details_elem-link {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0D63F3;
+}
+.tbl__content-details_active {
+  display: block;
+}
 .tbl__footers {
   list-style-type: none;
   display: flex;
