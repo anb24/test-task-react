@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-import DownloadBtn from "../images/download.png";
+import {DownloadBtn} from "../config/links";
 
 function CreatePage() {
 

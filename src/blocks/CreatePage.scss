@@ -1,3 +1,10 @@
+@mixin large-text {
+  font: {
+    family: Inter;
+    style: normal;
+  };
+}
+
 .form {
   display: grid;
   justify-content: center;
@@ -5,8 +12,7 @@
 
   &__title {
     justify-self: center;
-    font-family: 'Inter';
-    font-style: normal;
+    @include large-text;
     font-weight: 600;
     font-size: 25px;
     line-height: 28px;
@@ -38,8 +44,7 @@
     border-radius: 5px;
     height: 55px;
     padding-left: 19px;
-    font-family: 'Inter';
-    font-style: normal;
+    @include large-text;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -185,8 +190,7 @@
     background-color: #0D63F3;
     border-radius: 5px;
     border: none;
-    font-family: 'Inter';
-    font-style: normal;
+    @include large-text;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
@@ -267,8 +271,7 @@
     background-color: #0D63F3;
     border-radius: 5px;
     border: none;
-    font-family: 'Inter';
-    font-style: normal;
+    @include large-text;
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;

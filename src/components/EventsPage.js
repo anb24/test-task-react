@@ -1,34 +1,22 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 
-import data from "../vendor/db.json";
 import api from "../utils/api"
 
 import Header from "./Header";
 import Footer from "./Footer";
+import Pagination from "./Pagination";
 import Popup from "./Popup";
 
-import ArrowBtn from '../images/arrow_up-down.png';
-import MoreBtnPlus from '../images/Plus.png';
-import MoreBtnMinus from '../images/minus.png';
-import OptionsBtn from '../images/options.png';
-import DeleteBtn from '../images/delete.png';
-import LeftBtn from '../images/arrow_left.png';
-import RightBtn from '../images/arrow_right.png';
-import ExitPopupOptions from '../images/popup/exit_btn.png';
-import PlayPopupOptionsBtn from '../images/popup/btn_play.png';
-import BannersPopupOptionsBtn from '../images/popup/btn_banners.png';
-import SlidersPopupOptionsBtn from '../images/popup/btn_sliders.png';
-import EditPopupOptionsBtn from '../images/popup/btn_edit.png';
-import UsersPopupOptionsBtn from '../images/popup/btn_users.png';
-import ChatPopupOptionsBtn from '../images/popup/btn_chat.png';
-
+import {ArrowBtn, OptionsBtn, DeleteBtn, ExitPopupOptions, PlayPopupOptionsBtn, BannersPopupOptionsBtn, SlidersPopupOptionsBtn, EditPopupOptionsBtn, UsersPopupOptionsBtn, ChatPopupOptionsBtn} from "../config/links";
 
 function EventsPage() {
+    const [events, setEvents] = useState([]);
     const [popupDeleteActive, setPopupDeleteActive] = useState(false);
     const [popupOptionsActive, setPopupOptionsActive] = useState(false);
-    const [events, setEvents] = useState([]);
     const [eventId, setEventId] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [evtPerPage] = useState(8);
 
     useEffect(() => {
         api
@@ -92,6 +80,22 @@ function EventsPage() {
         }
     }
 
+    const lastEvtIndex = currentPage * evtPerPage;
+    const firstEvtIndex = lastEvtIndex - evtPerPage;
+    const currentEvt = events.slice(firstEvtIndex, lastEvtIndex);
+
+    function paginate(pageNumber){
+        setCurrentPage(pageNumber);
+    }
+
+    function prevPage() {
+        setCurrentPage(prev => prev - 1)
+    }
+
+    function nextPage() {
+        setCurrentPage(prev => prev + 1)
+    }
+
     return (
         <div>
             <Header/>
@@ -111,14 +115,12 @@ function EventsPage() {
                     </ul>
 
                     <div className="box">
-                        {events.map((event, i) => {
+                        {currentEvt.map((event, i) => {
                             return (
                                 <div key={event.id}>
                                     <ul className="tbl__contents">
                                         <li className="tbl__content tbl__content-number">{event.id}</li>
-                                        <li className="tbl__content tbl__content-title">{event.name}<button className={event.isActive ? "tbl__content-title-btn" : "tbl__content-title-btn tbl__content-title-btn_active"} onClick={() => moreBtnClick(event, i)}>
-                                            {/*<img src={MoreBtnPlus} alt="Подробнее"/>*/}
-                                        </button></li>
+                                        <li className="tbl__content tbl__content-title">{event.name}<button className={event.isActive ? "tbl__content-title-btn" : "tbl__content-title-btn tbl__content-title-btn_active"} onClick={() => moreBtnClick(event, i)}></button></li>
                                         <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
                                         <li className="tbl__content tbl__content-date">{event.date}, {event.time}</li>
                                         <li className="tbl__content tbl__content-lead">{event.lead}</li>
@@ -138,64 +140,17 @@ function EventsPage() {
                         })}
                     </div>
 
-                    <ul className="tbl__footers">
-                        <li className="tbl__footer-pages">Показано 1-8 из 72 результатов</li>
-                        <li className="tbl__footer-btns">
-                            <button className="tbl__footer-btn"><img src={LeftBtn} alt="Влево"/></button>
-                            <button className="tbl__footer-btn">1</button>
-                            <button className="tbl__footer-btn">2</button>
-                            <button className="tbl__footer-btn">3</button>
-                            <button className="tbl__footer-btn">...</button>
-                            <button className="tbl__footer-btn">9</button>
-                            <button className="tbl__footer-btn"><img src={RightBtn} alt="Вправо"/></button>
-                        </li>
-                    </ul>
+                    <Pagination
+                        evtPerPage={evtPerPage}
+                        totalEvt={events.length}
+                        paginate={paginate}
+                        nextPage={nextPage}
+                        prevPage={prevPage}
+                    />
                 </div>
-
-                {/*<table className="tbl">*/}
-                {/*    <thead>*/}
-                {/*    <tr>*/}
-                {/*        <th className="tbl__name">№</th>*/}
-                {/*        <th className="tbl__name">Название<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Статус<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Начало<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Ведущий<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Модератор<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Доступ<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Чат<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*        <th className="tbl__name">Опции<button className="tbl__name-btn"><img src={ArrowBtn} alt="Сортировка"/></button></th>*/}
-                {/*    </tr>*/}
-                {/*    </thead>*/}
-                {/*    <tbody>*/}
-                {/*    <tr>*/}
-                {/*        <td className="tbl__value">1</td>*/}
-                {/*        <td className="tbl__value">Тест Vimeo<button className="tbl__value-name-btn"><img src={MoreBtn} alt="Подробнее"/></button></td>*/}
-                {/*        <td className="tbl__value"><button className="tbl__value-status-btn">запланировано</button></td>*/}
-                {/*        <td className="tbl__value">14.11.2023, 23:00</td>*/}
-                {/*        <td className="tbl__value">Иван</td>*/}
-                {/*        <td className="tbl__value">Попов Александр</td>*/}
-                {/*        <td className="tbl__value"><button className="tbl__value-status-btn">открытый</button></td>*/}
-                {/*        <td className="tbl__value"><button className="tbl__value-status-btn">вкл</button></td>*/}
-                {/*        <td className="tbl__value"><button className="tbl__value-options"><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__value-options"><img src={DeleteBtn} alt="Удалить"/></button></td>*/}
-                {/*    </tr>*/}
-                {/*    </tbody>*/}
-                {/*    <tfoot>*/}
-                {/*    <tr>*/}
-                {/*        <td className="tbl__footer-pages" colSpan="2">Показано 1-8 из 72 результатов</td>*/}
-                {/*        <td className="tbl__footer-btns" colSpan="7">*/}
-                {/*            <button className="tbl__footer-btn"><img src={LeftBtn} alt="Влево"/></button>*/}
-                {/*            <button className="tbl__footer-btn">1</button>*/}
-                {/*            <button className="tbl__footer-btn">2</button>*/}
-                {/*            <button className="tbl__footer-btn">3</button>*/}
-                {/*            <button className="tbl__footer-btn">...</button>*/}
-                {/*            <button className="tbl__footer-btn">9</button>*/}
-                {/*            <button className="tbl__footer-btn"><img src={RightBtn} alt="Вправо"/></button></td>*/}
-                {/*    </tr>*/}
-                {/*    </tfoot>*/}
-                {/*</table>*/}
-
             </main>
             <Footer/>
+
             <Popup active={popupOptionsActive} setActive={setPopupOptionsActive}>
                 <div className="popup__options">
                     <button className="popup__options_exit-btn" onClick={closeAllPopups}><img src={ExitPopupOptions} alt="Выход"/></button>
