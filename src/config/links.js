@@ -15,7 +15,6 @@ import UsersPopupOptionsBtn from '../images/popup/btn_users.png';
 import ChatPopupOptionsBtn from '../images/popup/btn_chat.png';
 import DownloadBtn from "../images/download.png";
 
-
 export {
     Logo,
     UserTestImg,

@@ -112,6 +112,7 @@
   color: #93A2B8;
   list-style-type: none;
   width: 100%;
+  cursor: default;
 }
 .tbl__header-number {
   max-width: 49px;
@@ -232,7 +233,6 @@
   padding: 0;
   border: none;
   margin-left: -15px;
-  cursor: pointer;
 }
 .tbl__content-status-btn_active {
   background-color: #EAF9E8;
@@ -748,14 +748,14 @@
 }
 .pagination__btns-box {
   display: flex;
+  border: 1px solid #D3DDEC;
+  border-radius: 9px;
 }
 .pagination__numbers {
   display: flex;
 }
 .pagination__btns {
   display: flex;
-  border: 1px solid #D3DDEC;
-  border-radius: 9px;
 }
 .pagination__btn {
   width: 54px;
@@ -768,6 +768,10 @@
   background-color: #F6F8FB;
   border: none;
   cursor: pointer;
+}
+.pagination__btn:hover {
+  background-color: #eef0f2;
+  transition: 0.2s;
 }
 
 .popup {

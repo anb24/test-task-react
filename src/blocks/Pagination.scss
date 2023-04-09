@@ -6,7 +6,6 @@
   margin: 100px 74px 0 73px;
   padding: 0;
 
-
   &__pages {
     font-family: 'Inter';
     font-style: normal;
@@ -22,6 +21,8 @@
 
   &__btns-box {
     display: flex;
+    border: 1px solid #D3DDEC;
+    border-radius: 9px;
   }
 
   &__numbers {
@@ -30,8 +31,6 @@
 
   &__btns {
     display: flex;
-    border: 1px solid #D3DDEC;
-    border-radius: 9px;
   }
 
   &__btn {
@@ -42,8 +41,12 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    background-color: #F6F8FB;;
+    background-color: #F6F8FB;
     border: none;
     cursor: pointer;
+    &:hover {
+      background-color: #eef0f2;
+      transition: .2s;
+    }
   }
 }

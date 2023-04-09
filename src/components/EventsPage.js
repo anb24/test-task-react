@@ -117,7 +117,6 @@ function EventsPage() {
                         <li className="tbl__header tbl__header-chat">Чат<button className="tbl__header-btn"><img src={ArrowBtn} alt="Сортировка"/></button></li>
                         <li className="tbl__header tbl__header-options">Опции<button className="tbl__header-btn"><img src={ArrowBtn} alt="Сортировка"/></button></li>
                     </ul>
-
                     <div className="box">
                         {currentEvt.map((event, i) => {
                             return (
@@ -143,7 +142,6 @@ function EventsPage() {
                             )
                         })}
                     </div>
-
                     <Pagination
                         evtPerPage={evtPerPage}
                         totalEvt={events.length}
@@ -154,7 +152,6 @@ function EventsPage() {
                 </div>
             </main>
             <Footer/>
-
             <Popup active={popupOptionsActive} setActive={setPopupOptionsActive}>
                 <div className="popup__options">
                     <button className="popup__options_exit-btn" onClick={closeAllPopups}><img src={ExitPopupOptions} alt="Выход"/></button>

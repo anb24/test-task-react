@@ -29,7 +29,6 @@ function CreatePage() {
                             <label className="form__label" htmlFor="link-btn">Внешняя кнопка (ссылка)</label>
                             <input className="form__item form__item_el_link-btn" id="link-btn" name="link-btn" placeholder="Вставьте ссылку" required/>
                         </div>
-
                         <div className="form__container-elem">
                             <fieldset className="form__access">
                                 <p className="form__access-title">Доступ к мероприятию:</p>

@@ -52,6 +52,7 @@ $width-max: 100%;
     color: #93A2B8;
     list-style-type: none;
     width: $width-max;
+    cursor: default;
   }
 
   &__header-number {
@@ -175,7 +176,6 @@ $width-max: 100%;
     background-image: url("/src/images/Plus.png");
     background-position: center;
     background-size: cover;
-
     &_active {
       background-image: url("/src/images/minus.png");
     }
@@ -193,8 +193,6 @@ $width-max: 100%;
     padding: 0;
     border: none;
     margin-left: -15px;
-    cursor: pointer;
-
     &_active {
       background-color: #EAF9E8;
     }
