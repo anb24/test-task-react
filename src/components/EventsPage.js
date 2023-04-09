@@ -9,7 +9,8 @@ import Footer from "./Footer";
 import Popup from "./Popup";
 
 import ArrowBtn from '../images/arrow_up-down.png';
-import MoreBtn from '../images/Plus.png';
+import MoreBtnPlus from '../images/Plus.png';
+import MoreBtnMinus from '../images/minus.png';
 import OptionsBtn from '../images/options.png';
 import DeleteBtn from '../images/delete.png';
 import LeftBtn from '../images/arrow_left.png';
@@ -21,7 +22,6 @@ import SlidersPopupOptionsBtn from '../images/popup/btn_sliders.png';
 import EditPopupOptionsBtn from '../images/popup/btn_edit.png';
 import UsersPopupOptionsBtn from '../images/popup/btn_users.png';
 import ChatPopupOptionsBtn from '../images/popup/btn_chat.png';
-import {click} from "@testing-library/user-event/dist/click";
 
 
 function EventsPage() {
@@ -110,32 +110,15 @@ function EventsPage() {
                         <li className="tbl__header tbl__header-options">Опции<button className="tbl__header-btn"><img src={ArrowBtn} alt="Сортировка"/></button></li>
                     </ul>
 
-                    {/*Тестовый блок*/}
-                    <ul className="tbl__contents">
-                        <li className="tbl__content tbl__content-number">0</li>
-                        <li className="tbl__content tbl__content-title">Тест Vimeo<button className="tbl__content-title-btn"><img src={MoreBtn} alt="Подробнее"/></button></li>
-                        <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
-                        <li className="tbl__content tbl__content-date">14.11.2023, 23:00</li>
-                        <li className="tbl__content tbl__content-lead">Попов Александр</li>
-                        <li className="tbl__content tbl__content-moder">Попов Александр</li>
-                        <li className="tbl__content tbl__content-access"><button className="tbl__content-access-btn">открытый</button></li>
-                        <li className="tbl__content tbl__content-chat"><button className="tbl__content-chat-btn">вкл</button></li>
-                        <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={() => setPopupDeleteActive(true)}><img src={DeleteBtn} alt="Удалить"/></button></li>
-                    </ul>
-                    {/*<ul className={contentDetailsActive ? "tbl__content-details tbl__content-details_active" : "tbl__content-details"}>*/}
-                    {/*    <li className="tbl__content-details_elem">Ссылка на мероприятие: <a className="tbl__content-details_elem-link" href="#">https://app.inwebsale.com/moderator/#events</a></li>*/}
-                    {/*    <li className="tbl__content-details_elem">YouTube трансляция: <a className="tbl__content-details_elem-link"></a></li>*/}
-                    {/*    <li className="tbl__content-details_elem">Заглушка: <a className="tbl__content-details_elem-link"></a></li>*/}
-                    {/*    <li className="tbl__content-details_elem">Кликабельные ссылки от пользователей: <a className="tbl__content-details_elem-link"></a></li>*/}
-                    {/*</ul>*/}
-
                     <div className="box">
                         {events.map((event, i) => {
                             return (
                                 <div key={event.id}>
                                     <ul className="tbl__contents">
                                         <li className="tbl__content tbl__content-number">{event.id}</li>
-                                        <li className="tbl__content tbl__content-title">{event.name}<button className="tbl__content-title-btn" onClick={() => moreBtnClick(event, i)}><img src={MoreBtn} alt="Подробнее"/></button></li>
+                                        <li className="tbl__content tbl__content-title">{event.name}<button className={event.isActive ? "tbl__content-title-btn" : "tbl__content-title-btn tbl__content-title-btn_active"} onClick={() => moreBtnClick(event, i)}>
+                                            {/*<img src={MoreBtnPlus} alt="Подробнее"/>*/}
+                                        </button></li>
                                         <li className="tbl__content tbl__content-status"><button className="tbl__content-status-btn">запланировано</button></li>
                                         <li className="tbl__content tbl__content-date">{event.date}, {event.time}</li>
                                         <li className="tbl__content tbl__content-lead">{event.lead}</li>

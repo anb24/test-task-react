@@ -204,19 +204,25 @@
   justify-content: space-between;
 }
 .tbl__content-title-btn {
-  width: 29px;
-  height: 29px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 29px;
+  max-height: 29px;
+  width: 100%;
+  height: 100%;
   background: none;
   border: none;
-  padding: 0 16px 0 0;
+  padding: 0;
+  cursor: pointer;
+  background-image: url("/src/images/Plus.png");
+  background-position: center;
+  background-size: cover;
+}
+.tbl__content-title-btn_active {
+  background-image: url("/src/images/minus.png");
 }
 .tbl__content-status-btn {
   width: 145px;
   height: 45px;
-  background-color: #F5E3DC;
+  background-color: #E2ECF4;
   border-radius: 5px;
   font-family: "Inter";
   font-style: normal;
