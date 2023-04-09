@@ -18,6 +18,10 @@ function EventsPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const [evtPerPage] = useState(8);
 
+    const lastEvtIndex = currentPage * evtPerPage;
+    const firstEvtIndex = lastEvtIndex - evtPerPage;
+    const currentEvt = events.slice(firstEvtIndex, lastEvtIndex);
+
     useEffect(() => {
         api
             .getEvents()
@@ -80,16 +84,16 @@ function EventsPage() {
         }
     }
 
-    const lastEvtIndex = currentPage * evtPerPage;
-    const firstEvtIndex = lastEvtIndex - evtPerPage;
-    const currentEvt = events.slice(firstEvtIndex, lastEvtIndex);
-
     function paginate(pageNumber){
         setCurrentPage(pageNumber);
     }
 
     function prevPage() {
-        setCurrentPage(prev => prev - 1)
+        if(firstEvtIndex > 0) {
+            setCurrentPage(prev => prev - 1)
+        } else {
+            setCurrentPage(perv => perv)
+        }
     }
 
     function nextPage() {
