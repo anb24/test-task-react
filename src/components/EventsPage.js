@@ -38,27 +38,34 @@ function EventsPage() {
         setPopupOptionsActive(false);
     }
 
+    //*************************** УДАЛЕНИЕ ******************************************************************
+
     function handleDeleteEventClick(event) {
         setPopupDeleteActive(true);
         setEventId(event.id);
+        const btnDlt = document.querySelector('.popup__delete_yes-btn');
+        btnDlt.addEventListener('click', () => {
+            setEvents((prevState) => prevState.filter((evt) => evt.id !== event.id))
+            closeAllPopups()
+        })
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        handleEventDelete();
-    }
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     handleEventDelete();
+    // }
 
-    function handleEventDelete(event) {
-        api
-            .deleteEvent(eventId)
-            .then(() => {
-                setEvents((state) => state.filter((evt) => evt.id !== eventId));
-                setPopupDeleteActive(false);
-            })
-            .catch((err) => {
-                console.log("ОШИБКА удаления: " + err);
-            })
-    }
+    // function handleEventDelete(event) {
+    //     api
+    //         .deleteEvent(event)
+    //         .then(() => {
+    //             setEvents((state) => state.filter((evt) => evt.id !== event.id));
+    //             closeAllPopups();
+    //         })
+    //         .catch((err) => {
+    //             console.log("ОШИБКА удаления: ", err);
+    //         })
+    // }
 
     function moreBtnClick(event, index) {
         if(event.isActive === false) {
@@ -120,7 +127,8 @@ function EventsPage() {
                     <div className="box">
                         {currentEvt.map((event, i) => {
                             return (
-                                <div key={event.id}>
+                                <div key={event.id}
+                                >
                                     <ul className="tbl__contents">
                                         <li className="tbl__content tbl__content-number">{event.id}</li>
                                         <li className="tbl__content tbl__content-title">{event.name}<button className={event.isActive ? "tbl__content-title-btn" : "tbl__content-title-btn tbl__content-title-btn_active"} onClick={() => moreBtnClick(event, i)}></button></li>
@@ -130,7 +138,7 @@ function EventsPage() {
                                         <li className="tbl__content tbl__content-moder">Попов Александр</li>
                                         <li className="tbl__content tbl__content-access"><button className={event.access ? "tbl__content-access-btn tbl__content-access-btn_active" : "tbl__content-access-btn"} onClick={() => accessBtnClick(event, i)}>{event.access ? "открытый" : "закрытый"}</button></li>
                                         <li className="tbl__content tbl__content-chat"><button className={event.chat ? "tbl__content-chat-btn" : "tbl__content-chat-btn tbl__content-chat-btn_active"} onClick={() => chatBtnClick(event, i)}>{event.chat ? "выкл" : "вкл"}</button></li>
-                                        <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={handleDeleteEventClick}><img src={DeleteBtn} alt="Удалить"/></button></li>
+                                        <li className="tbl__content tbl__content-options"><button className="tbl__content-options-btn" onClick={() => setPopupOptionsActive(true)}><img src={OptionsBtn} alt="Опции"/></button><button className="tbl__content-options-btn" onClick={() => handleDeleteEventClick(event)}><img src={DeleteBtn} alt="Удалить"/></button></li>
                                     </ul>
                                     <ul className={event.isActive ? "tbl__content-details" : "tbl__content-details tbl__content-details_active" }>
                                         <li className="tbl__content-details_elem">Ссылка на мероприятие: <a className="tbl__content-details_elem-link" href="#">https://app.inwebsale.com/moderator/#events</a></li>
@@ -168,7 +176,7 @@ function EventsPage() {
             <Popup active={popupDeleteActive} setActive={setPopupDeleteActive}>
                 <div className="popup__delete">
                     <p className="popup__delete_text">Вы действительно хотите удалить мероприятие?</p>
-                    <button className="popup__delete_yes-btn" onClick={handleSubmit}>Да</button>
+                    <button type="submit" className="popup__delete_yes-btn" >Да</button>
                     <button className="popup__delete_no-btn" onClick={closeAllPopups}>Отмена</button>
                 </div>
             </Popup>
